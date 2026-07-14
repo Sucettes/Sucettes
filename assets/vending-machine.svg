@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 450" width="820" height="450" font-family="'Segoe UI', 'Trebuchet MS', sans-serif">
+  <defs>
+    <!-- ===== Gradients ===== -->
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a2be2"/>
+      <stop offset="0.5" stop-color="#5b21b6"/>
+      <stop offset="1" stop-color="#2a1240"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#150a26"/>
+      <stop offset="1" stop-color="#0b0518"/>
+    </linearGradient>
+    <linearGradient id="stick" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f6f6fb"/>
+      <stop offset="1" stop-color="#c7c7d8"/>
+    </linearGradient>
+    <linearGradient id="btn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a2358"/>
+      <stop offset="1" stop-color="#211040"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="0.4" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="floor" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- ===== Neon glow filter ===== -->
+    <filter id="glow" x="-40%" y="-60%" width="180%" height="220%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- ===== Reusable lollipop (drawn centered at 0,0) ===== -->
+    <g id="pop">
+      <rect x="-1.7" y="4" width="3.4" height="27" rx="1.7" fill="url(#stick)"/>
+      <circle r="13" fill="currentColor"/>
+      <path d="M0,-13 A13,13 0 0,1 0,13 Z" fill="#ffffff" opacity="0.16"/>
+      <path d="M0,-9 a9,9 0 1,1 -0.01,0 M0,-5 a5,5 0 1,0 0.01,0" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="-4.4" cy="-5" r="3" fill="#ffffff" opacity="0.6"/>
+      <circle r="13" fill="none" stroke="#000000" stroke-opacity="0.12"/>
+    </g>
+
+    <style>
+      @keyframes bob   { 0%,100% { transform: translateY(0) }      50% { transform: translateY(-3.5px) } }
+      @keyframes flick { 0%,18%,22%,25%,53%,57%,100% { opacity:1 } 20%,24%,55% { opacity:.35 } }
+      @keyframes blink { 0%,100% { opacity:1 } 50% { opacity:.15 } }
+      @keyframes dots  { 0%,100% { opacity:.2 } 50% { opacity:1 } }
+      @keyframes drop  {
+        0%   { transform: translateY(-150px); opacity:0 }
+        6%   { opacity:1 }
+        38%  { transform: translateY(0); opacity:1 }
+        46%  { transform: translateY(-6px) }
+        52%  { transform: translateY(0) }
+        70%  { transform: translateY(0); opacity:1 }
+        80%,100% { opacity:0 }
+      }
+      @keyframes sweep { 0% { transform: translateX(-260px) } 100% { transform: translateX(300px) } }
+      .bob   { animation: bob 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center }
+      .neon  { animation: flick 5s infinite }
+      .led   { animation: blink 1.4s infinite }
+      .dot   { animation: dots 1.2s infinite }
+      .drop  { animation: drop 4.5s cubic-bezier(.55,0,.9,.45) infinite; transform-box: fill-box }
+      .beam  { animation: sweep 6s ease-in-out infinite }
+    </style>
+  </defs>
+
+  <!-- floor shadow -->
+  <ellipse cx="410" cy="426" rx="230" ry="14" fill="url(#floor)"/>
+
+  <!-- ===== Cabinet ===== -->
+  <rect x="175" y="26" width="470" height="388" rx="30" fill="url(#body)" stroke="#c084fc" stroke-opacity="0.4" stroke-width="2"/>
+  <rect x="190" y="41" width="440" height="358" rx="22" fill="#1e0f33"/>
+
+  <!-- ===== Neon sign ===== -->
+  <rect x="212" y="56" width="396" height="56" rx="13" fill="#120821" stroke="#ff5da2" stroke-opacity="0.35"/>
+  <g filter="url(#glow)">
+    <g transform="translate(258,84)"><g class="bob"><use href="#pop" style="color:#ff5da2" transform="scale(0.62)"/></g></g>
+    <text class="neon" x="418" y="95" text-anchor="middle" font-size="30" font-weight="800" letter-spacing="7" fill="#ff8ac4">SUCETTES</text>
+    <g transform="translate(578,84)"><g class="bob" style="animation-delay:-1.5s"><use href="#pop" style="color:#46e5b7" transform="scale(0.62)"/></g></g>
+  </g>
+
+  <!-- ===== Glass display ===== -->
+  <rect x="210" y="126" width="252" height="252" rx="12" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.14"/>
+
+  <!-- shelves -->
+  <g fill="#3b2560">
+    <rect x="216" y="190" width="240" height="5" rx="2.5"/>
+    <rect x="216" y="256" width="240" height="5" rx="2.5"/>
+    <rect x="216" y="322" width="240" height="5" rx="2.5"/>
+  </g>
+
+  <!-- shelf A : FRONT-END -->
+  <g transform="translate(258,172)"><g class="bob"                          ><use href="#pop" style="color:#61dafb"/></g></g>
+  <g transform="translate(308,172)"><g class="bob" style="animation-delay:-.6s"><use href="#pop" style="color:#3178c6"/></g></g>
+  <g transform="translate(358,172)"><g class="bob" style="animation-delay:-1.2s"><use href="#pop" style="color:#f7df1e"/></g></g>
+  <g transform="translate(408,172)"><g class="bob" style="animation-delay:-1.8s"><use href="#pop" style="color:#ff5da2"/></g></g>
+  <text x="220" y="207" font-size="8.5" font-weight="700" letter-spacing="2" fill="#8b6fc4">FRONT-END</text>
+
+  <!-- shelf B : BACK-END -->
+  <g transform="translate(258,238)"><g class="bob" style="animation-delay:-.3s"><use href="#pop" style="color:#7a3ff2"/></g></g>
+  <g transform="translate(308,238)"><g class="bob" style="animation-delay:-.9s"><use href="#pop" style="color:#4caf50"/></g></g>
+  <g transform="translate(358,238)"><g class="bob" style="animation-delay:-1.5s"><use href="#pop" style="color:#4b8bbe"/></g></g>
+  <g transform="translate(408,238)"><g class="bob" style="animation-delay:-2.1s"><use href="#pop" style="color:#ff8c42"/></g></g>
+  <text x="220" y="273" font-size="8.5" font-weight="700" letter-spacing="2" fill="#8b6fc4">BACK-END</text>
+
+  <!-- shelf C : DEVOPS -->
+  <g transform="translate(258,304)"><g class="bob" style="animation-delay:-.5s"><use href="#pop" style="color:#2496ed"/></g></g>
+  <g transform="translate(308,304)"><g class="bob" style="animation-delay:-1.1s"><use href="#pop" style="color:#35a0e8"/></g></g>
+  <g transform="translate(358,304)"><g class="bob" style="animation-delay:-1.7s"><use href="#pop" style="color:#46e5b7"/></g></g>
+  <g transform="translate(408,304)"><g class="bob" style="animation-delay:-2.3s"><use href="#pop" style="color:#ff5c6c"/></g></g>
+  <text x="220" y="339" font-size="8.5" font-weight="700" letter-spacing="2" fill="#8b6fc4">DEVOPS · CLOUD</text>
+
+  <!-- glass reflection sweep -->
+  <clipPath id="gclip"><rect x="210" y="126" width="252" height="252" rx="12"/></clipPath>
+  <g clip-path="url(#gclip)">
+    <polygon class="beam" points="0,126 70,126 20,378 -50,378" fill="url(#shine)"/>
+  </g>
+
+  <!-- dispensing lollipop falling into the tray -->
+  <g clip-path="url(#gclip)">
+    <g transform="translate(336,352)"><g class="drop"><use href="#pop" style="color:#ffd43b"/></g></g>
+  </g>
+  <!-- tray opening -->
+  <rect x="300" y="346" width="72" height="26" rx="6" fill="#0a0416" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="336" y="363" text-anchor="middle" font-size="8" font-weight="700" letter-spacing="2" fill="#6b5a94">PUSH</text>
+
+  <!-- ===== Control panel ===== -->
+  <rect x="474" y="126" width="136" height="252" rx="12" fill="#160b28" stroke="#ffffff" stroke-opacity="0.1"/>
+
+  <!-- mini screen -->
+  <rect x="486" y="138" width="112" height="46" rx="7" fill="#04140b" stroke="#2fbf71" stroke-opacity="0.5"/>
+  <text x="542" y="158" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="2" fill="#57e39a">LOADING</text>
+  <g fill="#57e39a">
+    <circle class="dot" cx="524" cy="172" r="3"/>
+    <circle class="dot" cx="542" cy="172" r="3" style="animation-delay:-.4s"/>
+    <circle class="dot" cx="560" cy="172" r="3" style="animation-delay:-.8s"/>
+  </g>
+
+  <!-- coin slot -->
+  <rect x="508" y="200" width="68" height="9" rx="4.5" fill="#000000" stroke="#ffffff" stroke-opacity="0.25"/>
+
+  <!-- keypad -->
+  <g fill="url(#btn)" stroke="#ffffff" stroke-opacity="0.12">
+    <rect x="490" y="222" width="30" height="24" rx="5"/>
+    <rect x="527" y="222" width="30" height="24" rx="5"/>
+    <rect x="564" y="222" width="30" height="24" rx="5"/>
+    <rect x="490" y="252" width="30" height="24" rx="5"/>
+    <rect x="527" y="252" width="30" height="24" rx="5"/>
+    <rect x="564" y="252" width="30" height="24" rx="5"/>
+    <rect x="490" y="282" width="30" height="24" rx="5"/>
+    <rect x="527" y="282" width="30" height="24" rx="5"/>
+    <rect x="564" y="282" width="30" height="24" rx="5"/>
+  </g>
+  <g fill="#b79be6" font-size="11" font-weight="700" text-anchor="middle">
+    <text x="505" y="239">A</text><text x="542" y="239">1</text><text x="579" y="239">B</text>
+    <text x="505" y="269">2</text><text x="542" y="269">C</text><text x="579" y="269">3</text>
+    <text x="505" y="299">D</text><text x="542" y="299">4</text><text x="579" y="299">E</text>
+  </g>
+
+  <!-- status LEDs -->
+  <g>
+    <circle class="led" cx="500" cy="330" r="5.5" fill="#ff5da2"/>
+    <circle class="led" cx="522" cy="330" r="5.5" fill="#46e5b7" style="animation-delay:-.5s"/>
+    <circle class="led" cx="544" cy="330" r="5.5" fill="#61dafb" style="animation-delay:-.9s"/>
+    <circle class="led" cx="566" cy="330" r="5.5" fill="#f7df1e" style="animation-delay:-1.2s"/>
+  </g>
+  <text x="542" y="360" text-anchor="middle" font-size="8" font-weight="700" letter-spacing="2" fill="#6b5a94">1 COMMIT = 1 POP</text>
+
+  <!-- ===== caption ===== -->
+  <text x="410" y="438" text-anchor="middle" font-size="12" letter-spacing="1" fill="#9a8ac0">React · TypeScript · Next.js · .NET · Node · Python · Docker · Azure</text>
+</svg>

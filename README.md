@@ -7,7 +7,7 @@
 
 <!-- Animated banner (self-typing text) -->
 <a href="https://github.com/Sucettes">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=900&color=FF5DA2&center=true&vCenter=true&width=650&height=70&lines=Hi%2C+I'm+Sucettes+%F0%9F%8D%AD;Full-stack+dev+%2F+generalist;React+%E2%80%A2+.NET+%E2%80%A2+Node+%E2%80%A2+Cloud;I+turn+coffee+into+sweet+code" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=900&color=FF5DA2&center=true&vCenter=true&width=650&height=70&lines=Hi%2C+I'm+Sucettes+%F0%9F%8D%AD;Full-stack+dev+%2F+generalist;I+turn+coffee+into+sweet+code" alt="Typing SVG" />
 </a>
 
 <br/>
@@ -19,21 +19,12 @@
 
 <br/>
 
-```
+<div align="center">
 
-   ╔══════════════════════════════════════════════════════════════╗
-   ║   🍭  VENDING MACHINE  ·  1 commit = 1 lollipop              ║
-   ╠══════════════════════════════════════════════════════════════╣
-   ║                                                              ║
-   ║    [ FRONT ]   React · TypeScript · Next.js                  ║
-   ║    [ BACK  ]   .NET · Node.js · Python                       ║
-   ║    [ CLOUD ]   Docker · CI/CD · Azure / AWS                  ║
-   ║                                                              ║
-   ║    >  insert an idea...            [ ● ● ● ]  loading        ║
-   ║                                                              ║
-   ╚══════════════════════════════════════════════════════════════╝
+<!-- Animated candy-code vending machine (custom SVG) -->
+<img src="./assets/vending-machine.svg" alt="Sucettes — the candy-code vending machine" width="760" />
 
-```
+</div>
 
 <br/>
 
@@ -75,33 +66,18 @@
 
 <br/>
 
-## 🏆 My little trophies
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=Sucettes&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=8&margin-h=8" alt="trophies" />
-
-</div>
-
-<br/>
-
 ## 🤝 Let's talk
 
 <div align="center">
 
 [![Website](https://img.shields.io/badge/hexophy.com-FF5DA2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://hexophy.com/)
 [![Discord](https://img.shields.io/badge/Studio%20Hexophy-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Qdu8DE9uRB)
-[![Contact me](https://img.shields.io/badge/🍭%20Drop%20me%20a%20line-FF5DA2?style=for-the-badge&logoColor=white)](https://tally.so/r/pb1vPJ)
 
 <!-- ☕ → 🍭  Buy Me a Coffee button — uncomment when your account is ready,
      then replace YOUR_BMC_USERNAME with your handle (e.g. buymeacoffee.com/sucettes) -->
 <!-- <br/>
 
 [![Buy me a lollipop](https://img.shields.io/badge/🍭%20Buy%20me%20a%20lollipop-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/YOUR_BMC_USERNAME) -->
-
-
-<!-- 📬 "Contact me" points to an external Tally form.
-     Your email is NEVER exposed: the service relays messages to you. -->
 
 </div>
 
